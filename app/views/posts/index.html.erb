@@ -1,0 +1,30 @@
+<div class="haikei">
+    <%= form_with url: "/posts", method: :post, class: "uenooowaku",local: true do |form| %>
+      <%= form.text_field :memo, class: "iririki" %> 
+       <%= form.submit '投稿する', class: "toukou" %>
+      <% end %>
+      
+      
+      <div class="shitanohako">
+                    
+      
+    <% @posts.each do |post| %>
+     <div  class="nakanowaku">
+           
+      <%= post.memo %>
+       <%= post.created_at %>
+          </div>
+   
+        <% end %>
+      
+      
+       </div>
+      
+      
+      
+      
+ </div>
+ 
+
+
+ 
